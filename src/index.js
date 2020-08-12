@@ -34,7 +34,7 @@ const renderApp = () => {
   }
 };
 
-// Loading screen while fetching data
+// Loading page while fetching data
 ReactDOM.render(<LoadingPage />, document.getElementById("root"));
 
 //Render data only if user in authenticated
