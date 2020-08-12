@@ -1,0 +1,17 @@
+//! do not use .input to prevent breaking third party components
+.text-input {
+  border: 1px solid #cacccd;
+  height: 50px;
+  font-size: 300;
+  font-weight: 300;
+  padding: $s-size;
+}
+
+.select {
+  @extend .text-input;
+}
+
+.textarea {
+  @extend .text-input;
+  height: 10rem;
+}

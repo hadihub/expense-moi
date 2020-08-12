@@ -5,9 +5,11 @@ import { startLogin } from "../actions/auth";
 const LoginPage = ({ startLogin }) => (
   <div className="box-layout">
     <div className="box-layout__box">
-      <h1 className="box-layout__title">AccountAnt App</h1>
-      <p>Don't worry you Ant gonna loose track of your expenses</p>
-      <button onClick={startLogin}>Login</button>
+      <h1 className="box-layout__title">ExpenseMoi</h1>
+      <p>Keep track of your expense. Expense toi!</p>
+      <button className="button" onClick={startLogin}>
+        Login with Google
+      </button>
     </div>
   </div>
 );

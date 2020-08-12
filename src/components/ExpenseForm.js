@@ -57,38 +57,41 @@ export default class ExpenseForm extends React.Component {
   };
   render() {
     return (
-      <div>
+      <form className="form" onSubmit={this.onSubmit}>
         {this.state.error && <p>{this.state.error}</p>}
-        <form onSubmit={this.onSubmit}>
-          <input
-            type="text"
-            placeholder="Description"
-            autoFocus
-            value={this.state.description}
-            onChange={this.onDescriptionChange}
-          />
-          <input
-            type="text"
-            placeholder="Amount"
-            autoFocus
-            value={this.state.amount}
-            onChange={this.onAmountChange}
-          />
-          <SingleDatePicker
-            date={this.state.createdAt} // momentPropTypes.momentObj or null
-            onDateChange={this.onDateChange} // PropTypes.func.isRequired
-            focused={this.state.calendarFocused} // PropTypes.bool
-            onFocusChange={this.onFocusChange} // PropTypes.func.isRequired
-            id="your_unique_id" // PropTypes.string.isRequired,
-          />
-          <textarea
-            placeholder="Add a note for your expense"
-            value={this.state.note}
-            onChange={this.onNoteChange}
-          />
-          <button>Add Expense</button>
-        </form>
-      </div>
+        <input
+          type="text"
+          placeholder="Description"
+          className="text-input"
+          autoFocus
+          value={this.state.description}
+          onChange={this.onDescriptionChange}
+        />
+        <input
+          type="text"
+          placeholder="Amount"
+          className="text-input"
+          autoFocus
+          value={this.state.amount}
+          onChange={this.onAmountChange}
+        />
+        <SingleDatePicker
+          date={this.state.createdAt} // momentPropTypes.momentObj or null
+          onDateChange={this.onDateChange} // PropTypes.func.isRequired
+          focused={this.state.calendarFocused} // PropTypes.bool
+          onFocusChange={this.onFocusChange} // PropTypes.func.isRequired
+          id="your_unique_id" // PropTypes.string.isRequired,
+        />
+        <textarea
+          placeholder="Add a note for your expense"
+          className="textarea"
+          value={this.state.note}
+          onChange={this.onNoteChange}
+        />
+        <div>
+          <button className="button">Add Expense</button>
+        </div>
+      </form>
     );
   }
 }
