@@ -9,6 +9,7 @@ import * as serviceWorker from "./serviceWorker";
 import "./index.scss";
 import "react-dates/lib/css/_datepicker.css";
 import { firebase } from "./firebase/firebase";
+import LoadingPage from "./components/LoadingPage";
 
 // Create the store
 const store = configureStore();
@@ -34,9 +35,9 @@ const renderApp = () => {
 };
 
 // Loading screen while fetching data
-ReactDOM.render(<p>Fetching Data...</p>, document.getElementById("root"));
+ReactDOM.render(<LoadingPage />, document.getElementById("root"));
 
-// Render data only if user in authenticated
+//Render data only if user in authenticated
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     console.log("Logged In");
