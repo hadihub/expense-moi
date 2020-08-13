@@ -6,10 +6,10 @@ import configureStore from "./store/configureStore";
 import { startSetExpenses } from "./actions/expenses";
 import { login, logout } from "./actions/auth";
 import * as serviceWorker from "./serviceWorker";
-import "./index.scss";
-import "react-dates/lib/css/_datepicker.css";
 import { firebase } from "./firebase/firebase";
 import LoadingPage from "./components/LoadingPage";
+import "react-dates/lib/css/_datepicker.css";
+import "./index.scss";
 
 // Create the store
 const store = configureStore();
